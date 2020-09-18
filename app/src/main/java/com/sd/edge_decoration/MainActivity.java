@@ -18,6 +18,16 @@ public class MainActivity extends AppCompatActivity
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
-        mBinding.viewEdgeTransparent.setDecorateEdge(IEdgeDecoration.Edge.TOP);
+        mBinding.viewEdgeTransparent.setDecorateSize(dp2px(30));
+        mBinding.viewEdgeTransparent.setDecorateEdge(IEdgeDecoration.Edge.LEFT
+                | IEdgeDecoration.Edge.TOP
+                | IEdgeDecoration.Edge.RIGHT
+                | IEdgeDecoration.Edge.BOTTOM);
+    }
+
+    private int dp2px(float dp)
+    {
+        final float scale = getResources().getDisplayMetrics().density;
+        return (int) (dp * scale + 0.5f);
     }
 }
