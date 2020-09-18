@@ -77,5 +77,4 @@ public class FEdgeTransparentLayout extends FrameLayout implements IEdgeDecorati
         canvas.restoreToCount(saveLayerCount);
         return drawChild;
     }
-
 }
